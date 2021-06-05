@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>
+            project 78
+        </title>
+        <link rel="stylesheet"href="style.css">
+    </head>
+    <body>
+        <h1>My family book</h1>
+        <img src="book.jpg"id="member">
+        <h4 id="name"></h4>
+        <button onclick="change()">next</button>
+    </body>
+    <script>
+        var imgs=["book.jpg","grand father.jpg","grand mother.jpg","father.jpg","mother.jpg","boy.jpg"];
+        var names=["Family book","Dr skandgupta kanaujia","Smt vimla kanaujia","Dr sushrut kanaujia","Dr surekha kanaujia","Kaustubh Kanaujia"];
+        var i=0;
+        function change()
+        {
+            i++;
+            var members=5;
+            if(i>members)
+            {
+                i=0;
+            }
+            var newimg=imgs[i];
+            var newname=names[i];
+            document.getElementById("member").src=newimg;
+            document.getElementById("name").innerHTML=newname;
+        
+        }
+    </script>
+</html>
